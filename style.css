@@ -36,6 +36,5 @@ html, body, * {
     height: 500px;
     width: 500px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
   }
   
