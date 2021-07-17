@@ -8,6 +8,7 @@ const blackHover = document.querySelectorAll('.blackHover');
 
 buttonSize.addEventListener('click', userInputGrid);
 buttonReset.addEventListener('click', defaultGrid)
+window.addEventListener('load', defaultGrid)
 
 function createGrid(GridSize) {
   removeAllChildNodes(gridContainer);
@@ -15,8 +16,7 @@ function createGrid(GridSize) {
   for (let i = 0; i < GridSize**2; i++) {
     const divGrid = document.createElement('div');
     divGrid.style.border = '1px red solid';
-    //divGrid.classList.add('blackHover');
-    //divGrid.addEventListener('mouseover', () => { divGrid.style.backgroundColor = 'black'});
+    divGrid.classList.add('divSquare');
     gridContainer.appendChild(divGrid);
   }
 }
@@ -38,4 +38,15 @@ function defaultGrid() {
   createGrid(16);
 }
 
-defaultGrid();
+function blackSquares() {
+  var divSquare = document.querySelectorAll('.divSquare');
+  var divSquareArray = Array.from(divSquare);
+  divSquareArray.forEach(div => {
+    divSquare.classList.add('blackHover');
+    //divGrid.addEventListener('mouseover', () => { divGrid.style.backgroundColor = 'black'});
+  })
+}
+
+function rainbowSquares() {
+  //add function to create draw black squares
+}
