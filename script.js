@@ -13,7 +13,7 @@ window.addEventListener('load', defaultGrid)
 function createGrid(GridSize) {
   removeAllChildNodes(gridContainer);
   gridContainer.style.gridTemplateColumns = `repeat(${GridSize}, 1fr)`;
-  
+
   for (let i = 0; i < GridSize**2; i++) {
     const divGrid = document.createElement('div');
     divGrid.style.border = '1px red solid';
@@ -55,3 +55,5 @@ function rainbowSquares() {
 function randomRBGValue() {
   return Math.floor(Math.random() * 256)
 }
+
+//testbranch
