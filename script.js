@@ -55,5 +55,3 @@ function rainbowSquares() {
 function randomRBGValue() {
   return Math.floor(Math.random() * 256)
 }
-
-//testbranchtwo
