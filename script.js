@@ -1,14 +1,17 @@
 const buttonBlack = document.querySelector('#button-black');
-const buttonRainbow = document.querySelector('#button-rainbow');
+const buttonRandom = document.querySelector('#button-random');
+const buttonErase = document.querySelector('#button-erase')
 const buttonSize = document.querySelector('#button-size');
 const buttonReset = document.querySelector('#button-reset');
-
 const gridContainer = document.querySelector('.grid-container');
-const blackHover = document.querySelectorAll('.blackHover');
 
+
+window.addEventListener('load', defaultGrid);
+buttonBlack.addEventListener('click', blackSquares);
+buttonRandom.addEventListener('click', randomSquares);
+buttonErase.addEventListener('click', eraseSquare);
 buttonSize.addEventListener('click', userInputGrid);
-buttonReset.addEventListener('click', defaultGrid)
-window.addEventListener('load', defaultGrid)
+buttonReset.addEventListener('click', defaultGrid);
 
 function createGrid(GridSize) {
   removeAllChildNodes(gridContainer);
@@ -18,13 +21,8 @@ function createGrid(GridSize) {
     const divGrid = document.createElement('div');
     divGrid.style.border = '1px red solid';
     divGrid.classList.add('divSquare');
+    divGrid.addEventListener('mouseover', () => { divGrid.style.backgroundColor = 'black'});
     gridContainer.appendChild(divGrid);
-  }
-}
-
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
   }
 }
 
@@ -42,16 +40,33 @@ function defaultGrid() {
 function blackSquares() {
   var divSquare = document.querySelectorAll('.divSquare');
   var divSquareArray = Array.from(divSquare);
-  divSquareArray.forEach(div => {
-    divSquare.classList.add('blackHover');
-    //divGrid.addEventListener('mouseover', () => { divGrid.style.backgroundColor = 'black'});
+  divSquareArray.forEach(divSquare => {
+    divSquare.addEventListener('mouseover', () => { divSquare.style.backgroundColor = 'black'});
   })
 }
 
-function rainbowSquares() {
-  //add function to create draw black squares
+function randomSquares() {
+  var divSquare = document.querySelectorAll('.divSquare');
+  var divSquareArray = Array.from(divSquare);
+  divSquareArray.forEach(divSquare => {
+    divSquare.addEventListener('mouseover', () => { divSquare.style.backgroundColor = `rgb(${randomRBGValue()}, ${randomRBGValue()}, ${randomRBGValue()})`});
+  })
+}
+
+function eraseSquare() {
+  var divSquare = document.querySelectorAll('.divSquare');
+  var divSquareArray = Array.from(divSquare);
+  divSquareArray.forEach(divSquare => {
+    divSquare.addEventListener('mouseover', () => { divSquare.style.backgroundColor = 'white'});
+  })
 }
 
 function randomRBGValue() {
   return Math.floor(Math.random() * 256)
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
