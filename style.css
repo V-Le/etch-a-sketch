@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  background-image: url('/image/bl-bg.jpg');
+  background-image: url('./image/bl-bg.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -47,13 +47,13 @@ h1 {
 }
 
 .grid-container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(233, 233, 233);
   height: 500px;
   width: 500px;
   display: grid;
 }
 
-button {
+.button {
   border: 1px black solid;
   border-radius: 8px;
   width: 100px;
@@ -61,6 +61,15 @@ button {
   text-transform: capitalize;
   white-space: nowrap;
   filter: drop-shadow(20px 20px 10px black);
+}
+
+.button:hover {
+  background-color: #6d64f1
+}
+
+.button:active {
+  background-color: #6d64f1;
+  transform: scale(1.1);
 }
 
 @media (max-width: 675px) {
