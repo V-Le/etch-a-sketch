@@ -1,6 +1,5 @@
 window.addEventListener('load', defaultGrid);
 
-
 //Functionality to page buttons
 document.querySelector('#button-black').addEventListener('click', blackSquares);
 document.querySelector('#button-random').addEventListener('click', randomSquares);
