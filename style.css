@@ -3,20 +3,32 @@ html, body, * {
     padding: 0px;
   }
 
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
+
+body {
+  background-image: url('/image/bl-bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
   
 .header {
-  background-color: red;
-  width: 100%;
-  height: 10vh;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 20px 0px;
+}
+
+h1 {
+  color: white;
+  font-size: 4em;
+  padding: 20px;
+  filter: drop-shadow(20px 20px 10px black);
 }
 
 .button-container {
@@ -27,13 +39,11 @@ body {
 }
 
 .container {
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  height: 82vh;
-  padding-top: 55px;
+  padding-top: 20px;
+  filter: drop-shadow(20px 20px 10px black);
 }
 
 .grid-container {
@@ -44,6 +54,17 @@ body {
 }
 
 button {
+  border: 1px black solid;
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  text-transform: capitalize;
   white-space: nowrap;
-  padding: 5px 20px;
+  filter: drop-shadow(20px 20px 10px black);
+}
+
+@media (max-width: 675px) {
+  .button-container {
+    display: grid;
+  }
 }

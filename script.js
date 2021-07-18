@@ -15,7 +15,7 @@ function createGrid(GridSize) {
 
   for (let i = 0; i < GridSize**2; i++) {
     const divGrid = document.createElement('div');
-    divGrid.style.border = '1px red solid';
+    divGrid.style.border = '1px black solid';
     divGrid.classList.add('divSquare');
     divGrid.addEventListener('mouseover', () => { divGrid.style.backgroundColor = 'black'});
     gridContainer.appendChild(divGrid);
