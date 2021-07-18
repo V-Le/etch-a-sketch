@@ -3,42 +3,68 @@ html, body, * {
     padding: 0px;
   }
 
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
+
+body {
+  background-image: url('/image/bl-bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
   
 .header {
-  background-color: red;
-  width: 100%;
-  height: 20vh;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 5px;
+  padding: 20px 0px;
+}
+
+h1 {
+  color: white;
+  font-size: 4em;
+  padding: 20px;
+  filter: drop-shadow(20px 20px 10px black);
 }
 
 .button-container {
-  width: 20em;
+  width: 40em;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .container {
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  height: 80vh;
-  padding: 50px;
+  padding-top: 20px;
+  filter: drop-shadow(20px 20px 10px black);
 }
 
 .grid-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 500px;
   width: 500px;
   display: grid;
+}
+
+button {
+  border: 1px black solid;
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  filter: drop-shadow(20px 20px 10px black);
+}
+
+@media (max-width: 675px) {
+  .button-container {
+    display: grid;
+  }
 }
