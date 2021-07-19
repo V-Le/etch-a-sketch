@@ -25,9 +25,14 @@ function createGrid(GridSize) {
 //Allows for user to input the size of the grid. Feature needed to alert invalid input.
 function userInputGrid() {
   while(isNaN(userGrid) || userGrid > 50 || userGrid < 1) {
-    var userGrid = parseInt(prompt('What size grid between 1-50', 16));
+    var userGrid = prompt('What size grid between 1-50', 16);
+    if (userGrid == null) {
+      break;
+    } else {
+      createGrid(userGrid);
+    }
   }
-  createGrid(userGrid);
+
 }
 
 //Grid that is initally loaded into page
