@@ -1,9 +1,9 @@
-html, body, * {
-    margin: 0px;
-    padding: 0px;
-  }
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-html, body {
+html {
   width: 100%;
   height: 100%;
 }
@@ -75,5 +75,9 @@ h1 {
 @media (max-width: 675px) {
   .button-container {
     display: grid;
+  }
+
+  .button {
+    margin: 3px 0px;
   }
 }

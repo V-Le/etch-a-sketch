@@ -58,7 +58,7 @@ function eraseSquare() {
   var divSquare = document.querySelectorAll('.divSquare');
   var divSquareArray = Array.from(divSquare);
   divSquareArray.forEach(divSquare => {
-    divSquare.addEventListener('mouseover', () => { divSquare.style.backgroundColor = 'white'});
+    divSquare.addEventListener('mouseover', () => { divSquare.style.backgroundColor = 'rgb(233, 233, 233)'});
   })
 }
 
